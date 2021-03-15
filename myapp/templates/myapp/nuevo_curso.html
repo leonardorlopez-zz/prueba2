@@ -1,0 +1,16 @@
+<h1>Nuevo curso</h1>
+<form method="post"> <!--Codigo HTML tradicional para generar un formulario-->
+                     <!--El metodo HTTP POST envia la peticion al servidor--> 
+{% csrf_token %}     <!--Es una variable que Django agrega automaticamente al 
+                     contexto de nuestra plantilla. Y que genera un codigo que 
+                     protege el formulario de ciertas vulnerabilidades 
+                     https://es.wikipedia.org/wiki/Cross-site_request_forgery--> 
+
+{{ form.as_p }}      <!--genera el codigo HTML para los campos que definimos en 
+                      forms.FormularioCurso-->
+                     <!--Se puede usar solamente {{form}}, para generar el formulario 
+                      en una misma linea. El agregado as_p indica que se deben usar 
+                      etiquetas <p> para cada campo, lo que hara que se muestren uno 
+                          por linea-->
+<input type="submit" value="Añadir curso">
+</form>

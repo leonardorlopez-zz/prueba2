@@ -1,0 +1,19 @@
+<html>
+    <title> Lista de cursos </title>
+    <table style = "border: 1px solid" >
+        <thead>
+            <tr>
+                <th> Curso </th>
+                <th> Inscriptos </th>
+                
+            </tr>
+        </thead>
+        {% for curso in cursos %}
+            <tr>
+                <td> {{ curso.nombre }} </td>
+                <td> {{ curso.inscriptos }} </td>
+                
+            </tr>
+        {% endfor %}
+    </table>
+</html>
